@@ -10,3 +10,16 @@ menu.addEventListener("click", () => {
         menu.classList.replace("fa-xmark", "fa-bars");
     }
 });
+
+//FAQ Accordion
+
+let accordion = document.querySelectorAll(".accordion-container .accordion");
+
+accordion.forEach((acco) => {
+    acco.addEventListener('click', () => {
+        accordion.forEach((subcontent) => {
+            subcontent.classList.remove("active")
+        })
+        acco.classList.add("active");
+    });
+});

@@ -13,25 +13,26 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px;
+    padding: 20px 32px;
+    background: #5b9cf1;
 }
 
 nav{
     display: block;
     width: 40%;
-    height: 40vh;
+    height: 60vh;
     position: fixed;
     background: #000000;
-    top: 100px;
+    top: 60px;
     right: 32px;
     z-index: 999;
-    transform: translateY(-150%);
+    transform: translateX(150%);
     transition: transform 0.5s ease-in-out;
     text-align: center;
 }
 
 .open-nav{
-    transform: translateY(0%);
+    transform: translateX(0%);
 }
 
 .fa-bars,
@@ -54,13 +55,13 @@ nav ul li a{
 }
 
 .logo{
-    color: #000000;
+    color: #F7F7F7;
     text-decoration: none;
     font-size: 18px;
 }
 
 .logo span{
-    color: #1877F2;
+    color: #000000;
 }
 
 main{
@@ -75,6 +76,7 @@ main{
     width: 100%;
     padding: 32px;
     position: relative;
+    border-radius: 12px;
 }
 
 .hero-text {
@@ -218,4 +220,209 @@ main{
 .context .detail{
     font-size: 13px;
     color: #F7F7F7;
+}
+
+.newsletter{
+    margin-top: 60px;
+}
+
+.newsletter h1{
+    text-align: center;
+    color: #F7F7F7;
+    font-size: 28px;
+    margin: 16px;
+}
+
+.newsletter p{
+    color: #F7F7F7;
+    font-size: 13px;
+    text-align: center;
+}
+
+form{
+    margin: 16px auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #F7F7F7;
+    padding: 8px;
+    justify-content: center;
+}
+
+form input{
+    outline: none;
+    border: none;
+    background: #F7F7F7;
+    width: 100%;
+}
+
+form button{
+    outline: none;
+    border: none;
+    background: #5b9cf1;
+    padding: 5px 8px;
+    color: #F7F7F7;
+    cursor: pointer;
+}
+
+form button:hover{
+    background: unset;
+    color: #000000;
+    transition: .5s;
+}
+
+.faq h1{
+    font-size: 25px;
+    margin: 16px;
+    text-align: center;
+}
+
+.accordion{
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.accordion-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #F7F7F7;
+    border: 2px solid #5b9cf1;
+    padding: 15px 20px;
+}
+
+.accordion-heading h3{
+    font-size: 14px;
+}
+
+.accordion-content{
+    font-size: 12px;
+    padding: 15px 20px;
+    border: 2px solid #5b9cf1;
+    background: #F7F7F7;
+    border-top: 0;
+    display: none;
+    animation: animate .2s linear backwards;
+    line-height: 1.5;
+    transform-origin: top;
+}
+
+.active .accordion-heading{
+    background-color: #5b9cf1;
+    color: #fff;
+}
+
+.active .accordion-heading i {
+    color: #fff;
+    transform: rotate(180deg);
+    transition: transform .2s .1s;
+}
+
+.active .accordion-content{
+    display: block;
+}
+
+@keyframes animate {
+    0%{
+        transform: scaleY(0);
+    }
+}
+
+.end{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials{
+    background: #5b9cf1;
+    color: #F7F7F7;
+}
+
+.links{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.links a{
+    text-decoration: none;
+    color: #F7F7F7;
+}
+
+.right p{
+    font-size: 12px;
+}
+
+@media (min-width: 920px) {
+    header{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    nav{
+        transform: translateX(0);
+        background: unset;
+        position: unset;
+        height: auto;
+        width: auto;
+    }
+
+    nav ul{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    nav ul li a{
+        padding: unset;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .hero{
+        height: 90vh;
+    }
+
+    .hero-text h1{
+        font-size: 32px;
+    }
+
+    .hero-text .head{
+        font-size: 20px;
+    }
+
+    .hero-text .subhead{
+        font-size: 16px;
+    }
+
+    .blog .posts{
+        font-size: 20px;
+    }
+
+    .blog-post{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 25px;
+    }
+
+    .section{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    form{
+        width: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+    main{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
