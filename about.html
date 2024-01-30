@@ -93,10 +93,15 @@
                 <h1>Let's get started on something great</h1>
                 <p>Subscribe to our newsletter to recieve daily updates.</p>
 
-                <form class="custom-form">
-                    <input type="text" placeholder="Enter email address">
-                    <button type="submit">Subscribe</button>
+                <form class="custom-form" id="newsletterform">
+                    <input type="email" placeholder="Enter email address" class="email" required>
+                    <button type="submit" class="news-btn">Subscribe</button>
                 </form>
+
+                <div class="loading-indicator">Subscribing...</div>
+                <div id="errorMessage" class="error-message"></div>
+
+                <div id="subscription-result"></div>
             </div>
 
             <div class="end">
