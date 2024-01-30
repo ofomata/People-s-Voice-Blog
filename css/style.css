@@ -37,7 +37,7 @@ nav{
 
 .fa-bars,
 .fa-xmark{
-    color: #000000;
+    color: #F7F7F7;
     font-size: 20px;
     cursor: pointer;
 }
@@ -222,8 +222,8 @@ main{
     color: #F7F7F7;
 }
 
-.newsletter{
-    margin-top: 60px;
+.section{
+    margin-bottom: 50px;
 }
 
 .newsletter h1{
@@ -239,7 +239,7 @@ main{
     text-align: center;
 }
 
-form{
+.custom-form{
     margin: 16px auto;
     display: flex;
     align-items: center;
@@ -249,14 +249,14 @@ form{
     justify-content: center;
 }
 
-form input{
+.custom-form input{
     outline: none;
     border: none;
     background: #F7F7F7;
     width: 100%;
 }
 
-form button{
+.custom-form button{
     outline: none;
     border: none;
     background: #5b9cf1;
@@ -265,7 +265,7 @@ form button{
     cursor: pointer;
 }
 
-form button:hover{
+.custom-form button:hover{
     background: unset;
     color: #000000;
     transition: .5s;
@@ -355,6 +355,162 @@ form button:hover{
     font-size: 12px;
 }
 
+/*About Page*/
+
+.hero-img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/perfect.avif);
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.side-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.info-section{
+    margin: 50px auto;
+}
+
+.welcome-note{
+    font-size: 14px;
+}
+
+.side-text{
+    margin: 16px auto;
+    font-size: 14px;
+}
+
+.side-text h1{
+    font-size: 20px;
+    margin: 16px auto;
+    text-align: center;
+}
+
+.about-newsletter{
+    margin-bottom: 50px;
+    border-bottom: 1px solid #F7F7F7;
+}
+
+/*Contact Page*/
+
+.contact-hero-img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/contact.avif);
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.left-col h1{
+    font-size: 20px;
+}
+
+.left-col p{
+    margin: 32px auto;
+    font-size: 14px;
+}
+
+.contact-custom-form{
+    margin-bottom: 40px;
+}
+
+.contact-custom-form input{
+    display: block;
+    margin-bottom: 16px;
+    width: 100%;
+    padding: 16px 12px;
+    outline: none;
+    border: none;
+    background: #b8d5ec;
+    color: #1877F2;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.contact-custom-form input::placeholder,
+.contact-custom-form textarea::placeholder{
+    color: #1877F2;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.contact-custom-form textarea{
+    display: block;
+    margin-bottom: 16px;
+    width: 100%;
+    padding: 16px 12px;
+    outline: none;
+    border: none;
+    background: #b8d5ec;
+    color: #1877F2;
+    font-weight: bold;
+    font-style: italic;
+    resize: none;
+}
+
+.contact-btn{
+    background: #1877F2;
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    color: #F7F7F7;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.contact-btn:hover{
+    background: unset;
+    color: #000000;
+    transition: .5s;
+}
+
+.right-col h1{
+    font-size: 20px;
+    margin: 32px auto;
+}
+
+.right-col p{
+    font-size: 14px;
+}
+
+.contact-info p{
+    line-height: 2;
+}
+
+.contact-info h3{
+    margin: 18px auto;
+    font-size: 14px;
+}
+
+.contact-opt{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-opt i{
+    color: #1877F2;
+    font-size: 22px;
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin: 40px auto;
+}
+  
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+  
+
 @media (min-width: 920px) {
     header{
         padding-left: 50px;
@@ -418,6 +574,38 @@ form button:hover{
     form{
         width: 60%;
     }
+
+    /*About Page*/
+
+    .about-page-image{
+        display: grid;
+        gap: 40px;
+        grid-template-columns: auto auto;
+        grid-template-areas: 
+        "left right";
+        align-items: center;
+    }
+    
+    .left{
+        grid-area: left;
+    }
+
+    /*Contact Page*/
+
+    .contact-page{
+        display: flex;
+        align-items: first baseline;
+        gap: 32px;
+    }
+
+    .right-col{
+        flex-basis: 60%;
+    }
+    .left-col{
+        flex-basis: 100%;
+    }
+
+    
 }
 
 @media (min-width: 1200px) {
